@@ -1,0 +1,127 @@
+/* NewForm.css - Split-screen layout for Shop Registration */
+
+.newform-root {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+/* LEFT IMAGE PANEL */
+.newform-left {
+  flex: 1;
+  min-width: 320px;
+  background-image: url('/images/pexels-pavel-danilyuk-6407632.jpg'); /* change path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* overlay to improve contrast */
+.newform-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.28));
+  pointer-events: none;
+}
+
+.newform-left .left-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  max-width: 340px;
+}
+.newform-left .left-content h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.newform-left .left-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* RIGHT FORM PANEL */
+.newform-right {
+  flex: 1;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center;
+  padding: 48px 36px;
+  min-width: 320px;
+}
+
+/* form card */
+.newform-card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(20, 30, 50, 0.08);
+  padding: 28px;
+}
+
+/* heading */
+.newform-card h1 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+}
+
+/* nicer labels and controls */
+.newform-card .form-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #2b2f36;
+}
+.newform-card .form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+/* submit button */
+.newform-card .btn-submit {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* helper note */
+.newform-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 900px) {
+  .newform-root {
+    flex-direction: column;
+  }
+  .newform-left {
+    height: 220px;
+    order: -1; /* show on top */
+  }
+  .newform-right {
+    padding: 28px 18px;
+  }
+  .newform-card {
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 20px;
+  }
+}

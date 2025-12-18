@@ -1,0 +1,31 @@
+.user-reg-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.user-reg-left {
+  flex: 1;
+  background-image: url('/images/pexels-pavel-danilyuk-6407632.jpg'); /* Put your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.user-reg-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-reg-right h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-reg-form {
+  width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,50 @@
+.userhome-container {
+  padding: 20px;
+  max-width: 1536px;      /* limits width on large screens */
+  margin: 0 auto;         /* centers content horizontally */
+  background-color: #bccbde;
+  background-image: url(/images/pexels-steve-30004067.jpg);
+  min-height: 100vh;
+  
+  
+}
+
+.userhome-container h1 {
+  margin-bottom: 15px;    /* spacing between lines */
+  font-size: 22px;
+  font-weight: 500;
+  
+}
+
+.navbar-custom {
+  margin-bottom: 30px;    /* spacing below navbar */
+  border-radius: 8px;
+  
+}
+
+.user-info {
+  background-color: white;
+  padding: 20px;
+  padding-left: 300;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 37vh;
+  background-image: url(/images/pexels-jplenio-1103970.jpg);
+  background-size: cover;
+}
+.description{
+ 
+  background-color: rgb(130, 48, 48);
+  padding: 20px;
+  padding-top:100px;
+  border-radius: 8px;
+  color: whitesmoke;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 37vh;
+  margin-bottom:30px;
+  background-image: url(/images/pexels-steve-30004067.jpg);
+  background-size: cover;
+  
+   
+}
+

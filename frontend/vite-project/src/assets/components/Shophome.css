@@ -1,0 +1,24 @@
+.shop-container {
+  padding: 20px;
+  max-width: 1536px; /* optional: limits width on large screens */
+  margin: 0 auto;   /* centers content horizontally */
+  min-height: 100vh;
+  background-color:#bccbde;
+  background-image: url(/images/pexels-steve-30004067.jpg);
+   height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.shop-info {
+  margin-bottom: 15px; /* space between each info line */
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255,255,255);
+  text-shadow: 2px 2px 4px #333;
+}
+
+.navbar-custom {
+  margin-bottom: 30px; /* space below navbar */
+}

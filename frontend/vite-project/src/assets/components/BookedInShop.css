@@ -1,0 +1,59 @@
+/* Container styling */
+.main-bookedinshop{
+    min-height: 100vh;
+    height: auto;   
+    background-image: linear-gradient(to right, #44A08D,#093637);
+    padding-top: 10px;
+
+}
+.bookings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 20px;
+}
+
+/* Card styling */
+.booking-card {
+  width: 20rem;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.booking-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card image */
+.booking-image {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Title */
+.booking-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.booking-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .booking-card {
+    width: 90%;
+  }
+}

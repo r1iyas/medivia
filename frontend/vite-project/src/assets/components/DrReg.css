@@ -1,0 +1,130 @@
+/* DrReg.css - Split-screen layout for Doctor Registration */
+
+.dr-reg-root {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f4f6f8;
+}
+
+/* LEFT IMAGE PANEL */
+.dr-reg-left {
+  flex: 1;
+  min-width: 320px;
+  background-image: url('/images/pexels-pavel-danilyuk-6407632.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* subtle overlay so text/icons on image are readable */
+.dr-reg-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.35));
+  pointer-events: none;
+}
+
+/* optional promo text/logo on left (centered) */
+.dr-reg-left .left-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  max-width: 320px;
+}
+.dr-reg-left .left-content h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.dr-reg-left .left-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* RIGHT FORM PANEL */
+.dr-reg-right {
+  flex: 1;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center;
+  padding: 48px 36px;
+  min-width: 320px;
+}
+
+/* form card */
+.dr-reg-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.08);
+  padding: 28px;
+}
+
+/* heading */
+.dr-reg-card h1 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+}
+
+/* spacing for bootstrap Form (optional overrides) */
+.dr-reg-card .form-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #2b2f36;
+}
+
+.dr-reg-card .form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+/* submit button full width on small screens */
+.dr-reg-card .btn-submit {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* small helper text */
+.dr-reg-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* RESPONSIVE - stack panels on small screens */
+@media (max-width: 900px) {
+  .dr-reg-root {
+    flex-direction: column;
+  }
+  .dr-reg-left {
+    height: 220px;
+    order: -1; /* show top */
+  }
+  .dr-reg-right {
+    padding: 28px 18px;
+  }
+  .dr-reg-card {
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 20px;
+  }
+}
